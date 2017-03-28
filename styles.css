@@ -52,12 +52,22 @@ h1 {
   display: inline-block;
 }
 
+label,
 button {
   background-color: #5B4447;
   color: #FFFFFF;
   border: none;
   height: 40px;
   width: 100px;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 svg {
