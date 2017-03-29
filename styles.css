@@ -76,9 +76,6 @@ button {
   border: 2px solid #5B4447;
   width: 250px;
   height: 313px;
-  margin-bottom: 0;
-  margin-top: 40px;
-  margin-left: 60px;
 }
 
 h3 {
@@ -104,34 +101,48 @@ img{
   margin-top: -5px
 }
 
+.card-btns {
+  /*background-color: pink;*/
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.delete-btn {
+  background-image: url("images/delete.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.delete-btn:hover {
+  background-image: url("images/delete-active.svg");
+}
+
+.favorite-btn {
+  background-image: url("images/favorite.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:
+}
+
+.favorite-btn:active,
+.favorite-btn:hover {
+  background-image: url("images/favorite-active.svg");
+}
+
 .button-icons {
   background-color: #5B4447;
   width: 246px;
   height: 50px;
   margin-top: -15px;
 }
-svg {
-  width:30px;
-  padding-top: 5px;
-}
 
-.st0:hover {
-  fill: #E26D5A;
-}
-
-#Layer_2 {
-  margin-left: 170px;
-}
 .card-container  {
-    background-color: #c2b2b4;
-    position:absolute;
-    top: 262px;
-    bottom:0;
-    left:0;
-    right:0;
-    width: 100%;
-    margin: 0 auto;
-    content:"";
+  background-color: #c2b2b4;
+  width: 100%;
+  height: 500px;
+  margin: 0px;
+  padding: 10px;
 }
 
 @media screen and (max-width:800px min-width 320px) {
