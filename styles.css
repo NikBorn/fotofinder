@@ -122,7 +122,7 @@ img{
   background-image: url("images/favorite.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width:
+
 }
 
 .favorite-btn:active,
@@ -145,13 +145,6 @@ img{
   padding: 10px;
 }
 
-@media screen and (max-width:800px min-width 320px) {
-  .top-section {
-    margin: 0;
-    width:20%;
-  }
+@media screen and (max-width:520px) {
 
-  .card-container {
-    margin: 0;
-    float:left;
   }
