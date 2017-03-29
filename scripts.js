@@ -6,38 +6,41 @@ addCard();
 function addCard() {
   var $photoTitle = $('#title-input').val();
   var $photoCaption = $('#caption-input').val();
-  var $photoImage = $('#file').val();
+  var $photoImageBad = $('#file').val();
+  var $photoImage = $photoImageBad.replace(/^.*\\/, "");
   var $cardCatalog = $('.card-container');
-
-  $cardCatalog.prepend(`<article class="photo-card"><h3>${$photoTitle}</h3><div class="card-image"></div><p>${$photoCaption}</p>`);
+  console.log($photoImage)
+  $cardCatalog.prepend(`<article class="photo-card"><h3>${$photoTitle}</h3><img class="card-image" src="photos/${$photoImage}"><p class="card-cap">${$photoCaption}</p>   <div class= "button-icons"><div class="delete-btn card-btns"></div><div class="favorite-btn card-btns"></div></div></article>`);
 };
 
-function checkComplete() {
-  var $photoTitle = $('#title-input').val();
-  var $photoCaption = $('#caption-input').val();
-  var $photoImage = $('#file').val();
-  var $saveBtn = $('#save-btn');
-  if ($photoTitle === "" || $photoCaption === ""  || $photoImage === "" ) {
-    $('#save-btn').prop('disabled', true)
-  } else {
-    $(this).prop('disabled', false)
-  }
-}
+$('.card-container').on('click', '.delete-btn', function(){
+  $(this).parent().parent().remove()
+  console.log($(this).parent().parent());
+})
+
+// function checkComplete() {
+//   var $photoTitle = $('#title-input').val();
+//   var $photoCaption = $('#caption-input').val();
+//   var $photoImage = $('#file').val();
+//   var $saveBtn = $('#save-btn');
+//   if ($photoTitle === "" || $photoCaption === ""  || $photoImage === "" ) {
+//     $('#save-btn').prop('disabled', 'disabled')
+//   } else if ($photoTitle !== "" || $photoCaption !== ""  || $photoImage !== "" ) {
+//     $('#save-btn').prop('disabled', 'enable'))
+//   }
+// }
 
 $('.card-container').on('click', '.favorite-btn', function(){
   var $pictureCard = $('.photo-card');
   var $favButton = $('.favorite-btn');
-  this.$pictureCard.css({
-    backgroundColor: 'blue'
+  $(this).parent().parent().toggleClass('favorite-background')
+  $(this).parent().siblings().toggleClass('favorite-background')
+
+  $(this).toggleClass('favorite-color')
   })
-  $favButton.toggleClass('favorite-color')
-})
 
-$('.card-container').on('click', '.delete-btn', function(){
-  $(this).parents('.photocard').remove()
-  console.log(this);
-})
 
-$('body').keyup(function(){
-  checkComplete();
-})
+
+// $('body').keyup(function(){
+//   checkComplete();
+// })
