@@ -14,17 +14,18 @@ body {
   background-color: #3E2A35;
   color: #FFFFFF;
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .top-container {
-  width: 500px;
+  width: 400px;
   margin: 0px auto;
 }
 
 .input-label {
-  color: #C2B2B4;
+  color: #938284;
   text-align:left;
-  margin-right: 400px;
+  margin: 0px 0px 10px 0px;
 }
 
 input {
@@ -40,8 +41,14 @@ h1 {
   margin: 20px 0px 10px 0px;
 }
 
-.input-label {
-  text-indent: 47px;
+
+#caption-input {
+  margin-bottom: 40px;
+}
+
+
+#title-input {
+  margin-bottom: 20px;
 }
 
 
@@ -54,33 +61,37 @@ h1 {
   display: inline-block;
 }
 
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
 label,
 button {
   background-color: #5B4447;
   color: #FFFFFF;
   border: none;
   height: 40px;
-  width: 100px;
+  width: 150px;
+  font-size: 12px;
 }
 
-.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+label {
+  padding: 10px 40px;
+  margin-right: 100px;
 }
 
 .photo-card {
   background-color: #FFFFFF;
   border: 2px solid #5B4447;
-  background-color: white;
   width: 250px;
-
   height: 313px;
   display: inline-block;
-  margin: 10px 10px 0px 0px;
+  margin: 0px 10px 10px 0px;
 
 }
 
@@ -93,13 +104,16 @@ h3 {
   padding-top: 5px;
 }
 
+.caption-container {
+  width: 250px;
+  height: 100px;
+}
 
 .card-cap {
   color: #5b4447;
   width: 242px;
   height: 70px;
-  margin-left: 5px;
-  margin-top:0
+  margin: 0px;
 }
 
 .card-btns {
@@ -107,7 +121,6 @@ h3 {
   height: 40px;
   display: inline-block;
   margin-top: 5px;
-
 }
 
 .delete-btn {
@@ -135,17 +148,22 @@ h3 {
 
 .button-icons {
   background-color: #5B4447;
-  width: 246px;
-  height: 48px;
-  margin-top: -17px;
+  width: 99%;
+  height: 46px;
+  margin-top: 10px;
+
 }
 
 .card-container  {
   background-color: #c2b2b4;
   width: 100%;
-  min-height: 500px;
-  margin: 0px;
-  padding: 10px;
+  min-height: 400px;
+  margin: 0px auto;
+  padding: 30px 15px 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }
 
 .favorite-background {
@@ -157,7 +175,11 @@ h3 {
     background-image: url("images/favorite-active.svg");
 }
 
-  @media screen and (max-width: 520px) {
+img {
+  width: 250px;
+}
+
+  /*@media screen and (max-width: 520px) {
       .top-container {
         width: 250px;
         }
@@ -166,4 +188,4 @@ h3 {
         }
 
       .card-container{ width:162%;}
-  }
+  }*/
