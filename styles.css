@@ -4,28 +4,29 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
 }
 
-.top-section {
-  background-color: #3E2A35;
-  color: #FFFFFF;
+button {
+  float: right;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 65px;
+  margin: 20px 0px 10px 0px;
+}
+
+h2 {
   text-align: center;
-  padding-bottom: 40px;
 }
 
-.top-container {
-  width: 400px;
-  margin: 0px auto;
-}
-
-.input-label {
-  color: #938284;
-  text-align:left;
-  margin: 0px 0px 10px 0px;
+h3 {
+  color: #5b4447;
+  font-weight: 300;
+  margin: 0px 0px 0px 5px;
 }
 
 input {
@@ -33,41 +34,12 @@ input {
   margin: 0px auto;
   width: 400px;
   height: 40px;
+  font-size: 24px;
 }
 
-h1 {
-  display: inline-block;
-  font-size: 50px;
-  margin: 20px 0px 10px 0px;
-}
-
-
-#caption-input {
-  margin-bottom: 40px;
-}
-
-
-#title-input {
-  margin-bottom: 20px;
-}
-
-
-.logo-icon {
-  background-image: url("images/foto-finder-logo.svg");
-  background-size: cover;
-  width:70px;
-  height: 50px;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.inputfile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
+label {
+  padding: 11px 40px;
+  float: left;
 }
 
 label,
@@ -80,47 +52,38 @@ button {
   font-size: 12px;
 }
 
-label {
-  padding: 10px 40px;
-  margin-right: 100px;
+.button-icons {
+  background-color: #5B4447;
+  width: 100%;
+  height: 46px;
+  padding: 0px 8px;
 }
 
-.photo-card {
-  background-color: #FFFFFF;
-  border: 2px solid #5B4447;
-  width: 250px;
-  height: 313px;
+.card-cap-cntr {
+  height: 110px;
+}
+
+.card-btns {
+  width: 32px;
+  height: 32px;
   display: inline-block;
-  margin: 0px 10px 10px 0px;
-
-}
-
-h3 {
-  color: #5b4447;
-  font-weight: 300;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 5px;
-  padding-top: 5px;
-}
-
-.caption-container {
-  width: 250px;
-  height: 100px;
+  margin-top: 8px;
 }
 
 .card-cap {
   color: #5b4447;
-  width: 242px;
-  height: 70px;
-  margin: 0px;
+  margin: 0px 5px;
 }
 
-.card-btns {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  margin-top: 5px;
+.card-container-container{
+  background-color: #c2b2b4;
+}
+
+.card-container  {
+  width: 82%;
+  min-height: 280px;
+  margin: 0px auto;
+  padding: 30px 0px;
 }
 
 .delete-btn {
@@ -129,42 +92,76 @@ h3 {
   background-repeat: no-repeat;
 }
 
-.delete-btn:hover {
-  background-image: url("images/delete-active.svg");
-}
-
 .favorite-btn {
   background-image: url("images/favorite.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: 155px;
-  padding top: 5px;
+  float: right;
+}
 
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.input-label {
+  color: #938284;
+  text-align:left;
+  margin: 0px 0px 5px 0px;
+}
+
+.logo-icon {
+  background-image: url("images/foto-finder-logo.svg");
+  background-size: cover;
+  width:85px;
+  height: 60px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.photo-card {
+  background-color: #FFFFFF;
+  border: 2px solid #5B4447;
+  width: 230px;
+  height: 340px;
+  display: inline-block;
+  margin: 0px 29px 10px 0px;
+}
+
+.top-container {
+  width: 515px;
+  margin: 0px auto;
+}
+
+.top-section {
+  background-color: #3E2A35;
+  color: #FFFFFF;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+#caption-input {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+#title-input {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.delete-btn:hover {
+  background-image: url("images/delete-active.svg");
 }
 
 .favorite-btn:hover {
   background-image: url("images/favorite-active.svg");
 }
 
-.button-icons {
-  background-color: #5B4447;
-  width: 99%;
-  height: 46px;
-  margin-top: 10px;
-
-}
-
-.card-container  {
-  background-color: #c2b2b4;
-  width: 100%;
-  min-height: 400px;
-  margin: 0px auto;
-  padding: 30px 15px 30px 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-}
 
 .favorite-background {
   background-color: #E26D5A;
@@ -175,9 +172,113 @@ h3 {
     background-image: url("images/favorite-active.svg");
 }
 
-img {
-  width: 250px;
+@media screen and (max-width: 960px) {
+
+  .card-container {
+    width: 664px;
+  }
+
+  .card-image {
+    width:296px;
+  }
+
+  .photo-card {
+    width: 300px;
+  }
 }
+
+@media screen and (max-width: 720px) {
+
+  .card-container {
+    width: 80%;
+    text-align: center;
+  }
+
+  .photo-card {
+    width: 40%;
+    height: auto;
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .top-container {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .photo-card {
+    width: 70%;
+  }
+
+  .logo-icon {
+    width: 68px;
+    height: 50px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 36px;
+  }
+
+  label {
+    padding: 11px 30px;
+    float: left;
+  }
+
+  label,
+  button {
+
+    height: 40px;
+    width: 120px;
+    font-size: 10px;
+  }
+
+  .input-label {
+    font-size: 12px;
+  }
+
+  .photo-card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 30px;
+  }
+
+  .photo-card {
+    width: 100%;
+  }
+}
+
+
 
   /*@media screen and (max-width: 520px) {
       .top-container {
