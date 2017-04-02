@@ -197,6 +197,7 @@ button {
   .photo-card {
     width: 40%;
     height: auto;
+    text-align: left;
   }
 
   .card-image {
@@ -204,6 +205,10 @@ button {
     height: auto;
     max-height: 250px;
 
+  }
+
+  delete-btn {
+    text-align: left;
   }
 
 }
